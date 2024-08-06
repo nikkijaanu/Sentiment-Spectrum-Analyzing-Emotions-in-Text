@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <script>
+        window.onload = function() {
+            var prediction = "{{ prediction }}";
+            console.log("Prediction:", prediction); // Debug statement
+
+            // Compare the predicted value and navigate to the corresponding page
+            if (prediction.trim().toLowerCase() === "sadness") {
+                // Navigate to the sadness image page
+                window.location.href = "/static/sad.jpg";
+            } else if (prediction.trim().toLowerCase() === "joy") {
+                // Navigate to the joy image page
+                window.location.href = "/static/joy.jpg";
+            } else if (prediction.trim().toLowerCase() === "love") {
+                // Navigate to the love image page
+                window.location.href = "/static/love.jpg";
+            } else if (prediction.trim().toLowerCase() === "suprise") {
+                // Navigate to the joy image page
+                window.location.href = "/static/suprise.jpg";
+            } else if (prediction.trim().toLowerCase() === "anger") {
+                // Navigate to the love image page
+                window.location.href = "/static/anger.jpg";
+            }else if (prediction.trim().toLowerCase() === "fear") {
+                // Navigate to the love image page
+                window.location.href = "/static/fear.jpg";
+            } else {
+                // Handle any other cases or errors
+                alert("Unknown prediction!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>The predicted emotion is: {{ prediction }}</h2>
+</body>
+</html>
+

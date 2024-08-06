@@ -1,0 +1,127 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask ML Model Deployment</title>
+    <style>
+      body {
+          background-image: url('/static/bg.jpg'); 
+          background-size: cover; 
+          background-repeat: no-repeat; 
+          background-clip: border-box;
+          color:black;
+      }
+      body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center; /* Horizontally center content */
+        align-items: center; /* Vertically center content */
+    }
+    h1{
+      font-size:50px;
+      font-family:"serif";
+    }
+    h2{
+      font-size:40px;
+    }
+    </style>
+</head>
+<body >
+  <center>
+    <div class="content">
+    <h1> SENTIMENT : SPECTRUM</h1>
+    <h2>Analyzing Emotions in Text</h2>
+    <form action="/predict" method="post">
+        
+        <br><br>
+        <textarea id="message" name="message" rows="18" cols="50"></textarea>
+        <br><br>
+        
+        <input type="submit" value="Predict">
+        
+    </form>
+  </div>
+  </center>
+    </body>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask ML Model Deployment</title>
+    <style>
+        body {
+            background-image: url('/static/bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .content {
+            background:#FFFF00(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 50px;
+            font-family: "serif";
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            max-width: 500px;
+            height: 200px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+            resize: none;
+        }
+        input[type="submit"] {
+            background-color:blue;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>SENTIMENT: SPECTRUM</h1>
+        <h2>Analyzing Emotions in Text</h2>
+        <form action="/predict" method="post">
+            <textarea id="message" name="message" rows="18" cols="50" placeholder="Enter your text here..."></textarea>
+            <br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
